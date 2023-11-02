@@ -1,0 +1,28 @@
+<main>
+  <div class="chat-container">
+    <div class="chat-content"></div>
+    <div class="chat-input">
+      <mat-form-field style="width: 100%" subscriptSizing="dynamic"
+        ><mat-label>Deine Nachricht</mat-label
+        ><textarea
+          style="resize: none"
+          matInput
+          rows="1"
+          (keyup)="autoGrowTextZone($event)"
+        ></textarea>
+        <button mat-icon-button matSuffix>
+          <mat-icon>photo_camera</mat-icon>
+        </button>
+        <button mat-icon-button matSuffix>
+          <mat-icon>image</mat-icon>
+        </button>
+        <button mat-icon-button matSuffix>
+          <mat-icon>mic</mat-icon>
+        </button>
+        <button mat-icon-button color="primary" matSuffix>
+          <mat-icon>send</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+</main>
