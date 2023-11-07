@@ -1,6 +1,15 @@
 <main>
   <div class="chat-container">
-    <div class="chat-content"></div>
+    <div class="chat-content">
+      <div
+        class="chat-item"
+        *ngFor="let item of items"
+        [class.bot-item]="item.bot"
+        [class.my-item]="!item.bot"
+      >
+        <div class="text" [innerHTML]="item.text"></div>
+      </div>
+    </div>
     <div class="chat-input">
       <mat-form-field style="width: 100%" subscriptSizing="dynamic"
         ><mat-label>Deine Nachricht</mat-label
